@@ -18,7 +18,8 @@ python3 ./transcribe_audio.py
 - ~4 min audio file in mp3 @192kbps is 6 MB
 
 # Transcription services review
-## OpenAI Audio API (Whisper)
+## OpenAI Audio API (Whisper large-v2)
+- powered by open-sourced Whisper V2 model: https://github.com/openai/whisper
 - max input file size is 25 MB only (~15min audio files)
 - 4 min mp3 file of 6 MB takes ~15 sec to get transcribed
 - Cost (USD): $0.006 / min
@@ -27,7 +28,8 @@ python3 ./transcribe_audio.py
     - $1 gives you ~ 3 hours of transcription
 
 ## OpenAI ChatGPT
-- audio file can be submitted as an attachment directly in ChatGPT and get transcripted ?
+- mp3 files was submitted to ChatGPT as an attachment
+- ChatGPT suggested python code to have it transcribed by OpenAI's Audio API, but did not transcribe it itself
 
 ## Amazon Transcribe
 - audio file has to be uploaded to an S3 bucket
@@ -41,3 +43,16 @@ python3 ./transcribe_audio.py
     - $0.01020 / min up to 5M min
     - much more expensive than OpenAI Audio API! 4 times more expensive! But offers more capabilities.
     - $1 gives you ~ 40 min of transcription
+
+## Nova model on Amazon Bedrock
+- Not meant for speech-to-text
+
+## Deepgram
+- support open-source Whisper models 
+- provide their own speech-to-text models: Nova (should not be confused with AWS new LLM models serie)
+- cheaper than OpenAI Whisper:
+  - $0.0043/min for Nova 2 models
+  - $0.0048/min for Whisper Large model (20% cheaper than openai's API)
+  - $0.0035/min for Whisper Base model (40% cheaper than openai's API)
+  - Pricing gets even lower with optional yearly plans
+- BUT their terms of service states they have the right to use your data to train their models.
