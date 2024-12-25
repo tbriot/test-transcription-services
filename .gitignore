@@ -4,3 +4,12 @@
 **/__pycache__/
 *.pyc
 *.pyo
+
+# Ignore audio files
+*.mp3
+*.mp4
+*.mpeg
+*.mpga
+*.m4a
+*.wav
+*.webm
