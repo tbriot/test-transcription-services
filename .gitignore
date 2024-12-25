@@ -1,0 +1,6 @@
+# Ignore les environnements virtuels Python
+**/venv/
+**/.venv/
+**/__pycache__/
+*.pyc
+*.pyo
