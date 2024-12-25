@@ -26,6 +26,8 @@ python3 ./transcribe_audio.py
     - $0.024 for 4 min audio file
     - $0.360 for 60 min audio file
     - $1 gives you ~ 3 hours of transcription
+- transcription is closer to edited text. It's seems it's been rewritten for clarity and readability. Con is that
+it does not capture the oral nature of the speech. It's less authentic.
 
 ## OpenAI ChatGPT
 - mp3 files was submitted to ChatGPT as an attachment
@@ -43,6 +45,7 @@ python3 ./transcribe_audio.py
     - $0.01020 / min up to 5M min
     - much more expensive than OpenAI Audio API! 4 times more expensive! But offers more capabilities.
     - $1 gives you ~ 40 min of transcription
+- transcription captures redundancies and hesitation. It is a raw transcription of spoken language.
 
 ## Nova model on Amazon Bedrock
 - Not meant for speech-to-text
