@@ -13,6 +13,19 @@ pip install -r requirements.txt
 python3 ./transcribe_audio.py
 ```
 
+## Whisper running locally
+```
+# Audio file must be present in repo's root directory
+export AUDIO_FILE=ralf_vie_mort_couple_20241224.mp3
+
+mkdir whisper_local && cd whisper_local
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+sudo apt update && sudo apt install ffmpeg
+whisper ../$AUDIO_FILE --language French --model tiny
+```
+
 # Audio files size
 - ~30 min audio file in mp3 @192kbps is 40 MB
 - ~4 min audio file in mp3 @192kbps is 6 MB
